@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 mkdir vehicle_tracking
 cd vehicle_tracking
@@ -10,6 +11,8 @@ python3 ../manage.py startapp users
 python3 ../manage.py startapp vehicles
 python3 ../manage.py startapp dashboard
 
+=======
+>>>>>>> 3cbe1ba (modified a file)
 vehicle_tracking/
 ├── manage.py
 ├── requirements.txt
@@ -111,6 +114,7 @@ vehicle_tracking/
     ├── test_models.py
     ├── test_views.py
     ├── test_forms.py
+<<<<<<< HEAD
     └── conftest.py
 
 
@@ -250,3 +254,6 @@ env/
 # OS
 .DS_Store
 Thumbs.db
+=======
+    └── conftest.py
+>>>>>>> 3cbe1ba (modified a file)
