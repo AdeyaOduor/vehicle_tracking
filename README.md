@@ -1,3 +1,15 @@
+
+mkdir vehicle_tracking
+cd vehicle_tracking
+django-admin startproject config .
+mkdir apps templates static media tests
+
+cd apps
+python3 ../manage.py startapp core
+python3 ../manage.py startapp users
+python3 ../manage.py startapp vehicles
+python3 ../manage.py startapp dashboard
+
 vehicle_tracking/
 ├── manage.py
 ├── requirements.txt
