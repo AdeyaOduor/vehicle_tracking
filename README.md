@@ -223,3 +223,30 @@ volumes:
   postgres_data:
   static_volume:
   media_volume:
+
+
+# gitignore
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+media
+.env
+.env.prod
+
+# Virtual environment
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
