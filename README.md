@@ -148,7 +148,7 @@ vehicle_tracking/
 </body>
 </html>
 
-
+# Deployment Steps
 python manage.py makemigrations
 python manage.py migrate
 
