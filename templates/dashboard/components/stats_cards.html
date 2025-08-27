@@ -1,0 +1,33 @@
+<div class="stats-grid">
+    <div class="mdc-card stat-card">
+        <div class="stat-card__content">
+            <i class="material-icons">directions_car</i>
+            <h3>Total Vehicles</h3>
+            <span class="stat-value">{{ stats.total|intcomma }}</span>
+        </div>
+    </div>
+    
+    <div class="mdc-card stat-card">
+        <div class="stat-card__content">
+            <i class="material-icons">check_circle</i>
+            <h3>Active Vehicles</h3>
+            <span class="stat-value">{{ stats.active|intcomma }}</span>
+        </div>
+    </div>
+    
+    <div class="mdc-card stat-card">
+        <div class="stat-card__content">
+            <i class="material-icons">build</i>
+            <h3>In Maintenance</h3>
+            <span class="stat-value">{{ stats.maintenance|intcomma }}</span>
+        </div>
+    </div>
+    
+    <div class="mdc-card stat-card">
+        <div class="stat-card__content">
+            <i class="material-icons">block</i>
+            <h3>Inactive Vehicles</h3>
+            <span class="stat-value">{{ stats.inactive|intcomma }}</span>
+        </div>
+    </div>
+</div>
