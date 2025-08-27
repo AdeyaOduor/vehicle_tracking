@@ -1,0 +1,13 @@
+{% if messages %}
+<div class="messages-container">
+    {% for message in messages %}
+    <div class="mdc-snackbar mdc-snackbar--leading">
+        <div class="mdc-snackbar__surface">
+            <div class="mdc-snackbar__label {% if message.tags %}mdc-snackbar__label--{{ message.tags }}{% endif %}">
+                {{ message }}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}

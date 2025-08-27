@@ -1,0 +1,22 @@
+<header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <span class="mdc-top-app-bar__title">
+                <i class="material-icons">directions_car</i>
+                {{ PROJECT_NAME }}
+            </span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+            {% if user.is_authenticated %}
+            <span class="mdc-top-app-bar__action-item">Welcome, {{ user.username }}</span>
+            <a href="{% url 'users:logout' %}" class="mdc-button mdc-button--raised">
+                <i class="material-icons">logout</i> Logout
+            </a>
+            {% else %}
+            <a href="{% url 'users:login' %}" class="mdc-button mdc-button--raised">
+                <i class="material-icons">login</i> Login
+            </a>
+            {% endif %}
+        </section>
+    </div>
+</header>

@@ -1,5 +1,37 @@
-{% comment %} includes/
-header.html
-footer.html
-navigation.html
-messages.html {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ PROJECT_NAME }}{% endblock %}</title>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Material UI CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@material-ui/core@4.11.0/dist/material-ui.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/material-ui.css' %}" rel="stylesheet">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    {% include 'includes/header.html' %}
+    
+    {% include 'includes/navigation.html' %}
+    
+    <main class="main-content">
+        <div class="container">
+            {% include 'includes/messages.html' %}
+            
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+    
+    {% include 'includes/footer.html' %}
+    
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@material-ui/core@4.11.0/dist/material-ui.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

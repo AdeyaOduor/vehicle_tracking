@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Login - {{ PROJECT_NAME }}{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="mdc-card">
+        <div class="mdc-card__content">
+            <h2 class="mdc-typography--headline4">Login</h2>
+            
+            <form method="post" class="auth-form">
+                {% csrf_token %}
+                
+                <div class="mdc-text-field">
+                    <input type="text" id="username" name="username" class="mdc-text-field__input" required>
+                    <label for="username" class="mdc-floating-label">Username or Email</label>
+                    <div class="mdc-line-ripple"></div>
+                </div>
+                
+                <div class="mdc-text-field">
+                    <input type="password" id="password" name="password" class="mdc-text-field__input" required>
+                    <label for="password" class="mdc-floating-label">Password</label>
+                    <div class="mdc-line-ripple"></div>
+                </div>
+                
+                <div class="form-options">
+                    <label class="mdc-checkbox">
+                        <input type="checkbox" name="remember_me" class="mdc-checkbox__native-control">
+                        <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                        </div>
+                    </label>
+                    <span>Remember me</span>
+                </div>
+                
+                <button type="submit" class="mdc-button mdc-button--raised mdc-button--primary">
+                    <span class="mdc-button__label">Login</span>
+                </button>
+            </form>
+            
+            <div class="auth-links">
+                <a href="{% url 'users:password_reset' %}">Forgot Password?</a>
+                <a href="{% url 'users:register' %}">Create Account</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

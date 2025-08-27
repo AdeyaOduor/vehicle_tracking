@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Welcome to {{ PROJECT_NAME }}{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="hero-content">
+        <h1 class="mdc-typography--headline2">Advanced Vehicle Tracking System</h1>
+        <p class="mdc-typography--body1">Manage your fleet efficiently with real-time tracking, maintenance scheduling, and comprehensive reporting</p>
+        
+        {% if not user.is_authenticated %}
+        <div class="hero-actions">
+            <a href="{% url 'users:register' %}" class="mdc-button mdc-button--raised mdc-button--primary">
+                Get Started
+            </a>
+            <a href="{% url 'users:login' %}" class="mdc-button mdc-button--outlined">
+                Login
+            </a>
+        </div>
+        {% else %}
+        <div class="hero-actions">
+            <a href="{% url 'dashboard:home' %}" class="mdc-button mdc-button--raised mdc-button--primary">
+                Go to Dashboard
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<div class="features-section">
+    <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                <div class="feature-card">
+                    <i class="material-icons">location_on</i>
+                    <h3>Real-time Tracking</h3>
+                    <p>Monitor vehicle locations in real-time with interactive maps</p>
+                </div>
+            </div>
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                <div class="feature-card">
+                    <i class="material-icons">assignment</i>
+                    <h3>Maintenance Management</h3>
+                    <p>Schedule and track vehicle maintenance efficiently</p>
+                </div>
+            </div>
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                <div class="feature-card">
+                    <i class="material-icons">analytics</i>
+                    <h3>Advanced Reporting</h3>
+                    <p>Generate detailed reports with charts and analytics</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
