@@ -90,6 +90,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Password expiry settings
 PASSWORD_EXPIRY_DAYS = 90
 PASSWORD_WARNING_DAYS = 7
+AUTH_USER_MODEL = 'users.CustomUser'
 
 # Internationalization
 LANGUAGE_CODE = 'en-us'
