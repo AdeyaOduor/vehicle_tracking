@@ -1,3 +1,8 @@
+python manage.py startapp core apps/core
+python manage.py startapp users apps/users
+python manage.py startapp vehicles apps/vehicles
+python manage.py startapp dashboard apps/dashboard
+
 vehicle_tracking/
 ├── manage.py
 ├── requirements.txt
