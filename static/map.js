@@ -1,3 +1,4 @@
+// static/js/map.js
 let map = null;
 let markers = [];
 
