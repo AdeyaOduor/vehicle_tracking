@@ -1,3 +1,4 @@
+// static/js/charts.js
 let charts = {};
 
 function initCharts(data) {
