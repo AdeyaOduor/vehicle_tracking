@@ -1,3 +1,4 @@
+// static/js/main.js
 // Initialize Material Components
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all Material Design components
